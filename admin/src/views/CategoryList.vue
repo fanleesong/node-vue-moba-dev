@@ -37,7 +37,7 @@ export default {
     },
 
     async remove(row){
-       this.$confirm(`确定删除分类${row.name}`, '提示', {
+       this.$confirm(`确定删除"${row.name}"分类？`, '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
@@ -47,6 +47,11 @@ export default {
               this.$message({
                 type: 'success',
                 message: '删除成功!'
+              });
+          } else{
+            this.$message({
+                type: 'success',
+                message: '删除失败!'
               });
           }
           this.fetch();
