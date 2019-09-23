@@ -47,12 +47,12 @@ export default {
       });
     },
     async fetch() {
-      const res = await this.$http.get(`categories/${this.id}`);
+      const res = await this.$http.get(`rest/categories/${this.id}`);
       console.log(JSON.stringify(res.data));
       this.model = res.data;
     },
     async fetchParents() {
-      const res = await this.$http.get(`categories`);
+      const res = await this.$http.get(`rest/categories`);
       console.log(JSON.stringify(res.data));
       this.parents = res.data;
     }
