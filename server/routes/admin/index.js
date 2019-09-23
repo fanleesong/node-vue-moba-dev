@@ -12,6 +12,14 @@ module.exports = app => {
         const model = await Category.findByIdAndUpdate(req.params.id, req.body); //数据来源于界面url传递过来的数据
         res.send(model);
     });
+    //删除分类
+    router.delete('/categories/:id', async(req, res) => {
+        await Category.findByIdAndDelete(req.params.id, req.body); //数据来源于界面url传递过来的数据
+        res.send({
+            errorCode: 0,
+            success: true
+        });
+    });
     //获取分类列表
     router.get('/categories', async(req, res) => {
         const items = await Category.find().limit(10); //数据来源于界面url传递过来的数据

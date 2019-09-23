@@ -7,23 +7,23 @@ import CategoryList from "./views/CategoryList.vue";
 Vue.use(Router);
 
 export default new Router({
-  routes: [{
-    path: "/",
-    name: "main",
-    component: Main,
-    children: [{
-        path: "/categories/create",
-        component: CategoryEdit
-      },
-      {
-        path: "/categories/edit/:id",
-        component: CategoryEdit,
-        props: true
-      },
-      {
-        path: "/categories/list",
-        component: CategoryList
-      },
-    ]
-  }]
+    routes: [{
+        path: "/",
+        name: "main",
+        component: Main,
+        children: [{
+                path: "/categories/create",
+                component: CategoryEdit
+            },
+            {
+                path: "/categories/edit/:id",
+                component: CategoryEdit,
+                props: true
+            },
+            {
+                path: "/categories/list",
+                component: CategoryList
+            },
+        ]
+    }]
 });
