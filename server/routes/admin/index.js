@@ -22,7 +22,7 @@ module.exports = app => {
     });
     //获取分类列表
     router.get('/categories', async(req, res) => {
-        const items = await Category.find().limit(10); //数据来源于界面url传递过来的数据
+        const items = await Category.find().populate('parent').limit(10); //数据来源于界面url传递过来的数据
         res.send(items);
     });
     //根据id查询分类
