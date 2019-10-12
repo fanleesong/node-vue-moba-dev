@@ -16,7 +16,7 @@ module.exports = app => {
     });
     //删除分类
     router.delete('/:id', async(req, res) => {
-        await Category.findByIdAndDelete(req.params.id, req.body); //数据来源于界面url传递过来的数据
+        await req.Model.findByIdAndDelete(req.params.id, req.body); //数据来源于界面url传递过来的数据
         res.send({
             errorCode: 0,
             success: true

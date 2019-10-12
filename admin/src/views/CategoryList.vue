@@ -10,7 +10,7 @@
           <el-button
             type="primary"
             size="small"
-            @click="$router.push(`rest/categories/edit/${scope.row._id}`)"
+            @click="$router.push(`/categories/edit/${scope.row._id}`)"
           >编辑</el-button>
           <el-button
             type="primary"
@@ -33,7 +33,7 @@ export default {
 
   methods: {
     async fetch() {
-      const res = await this.$http.get("rest/categories");
+      const res = await this.$http.get(`rest/categories`);
       this.items = res.data;
     },
 

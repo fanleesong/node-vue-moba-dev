@@ -34,9 +34,9 @@ export default {
       let res;
       console.log('id:' + this.id);
       if (this.id) {
-        res = await this.$http.put(`categories/${this.id}`, this.model); //将界面编辑数据发送给后端
+        res = await this.$http.put(`rest/categories/${this.id}`, this.model); //将界面编辑数据发送给后端
       } else {
-        res = await this.$http.post("categories", this.model); //将界面增加数据发送给后端
+        res = await this.$http.post("rest/categories", this.model); //将界面增加数据发送给后端
       }
 
       this.$router.push("/categories/list"); //跳转到类型列表界面
