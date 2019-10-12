@@ -5,4 +5,4 @@ const schema = mongoose.Schema({
     icon: { type: String },
 });
 
-module.exports = mongoose.model('Category', schema);
+module.exports = mongoose.model('Item', schema);
