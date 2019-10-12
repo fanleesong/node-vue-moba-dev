@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>分类列表</h1>
+    <h1>物品列表</h1>
     <el-table :data="items">
       <el-table-column prop="_id" label="ID" width="230"></el-table-column>
-      <el-table-column prop="parent.name" label="上级分类" width="120"></el-table-column>
       <el-table-column prop="name" label="分类名称" width="120"></el-table-column>
       <el-table-column prop="icon" label="图片地址" width="120"></el-table-column>
       <el-table-column fixed="right" label="操作" width="180">
