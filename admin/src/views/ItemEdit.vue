@@ -37,8 +37,8 @@ export default {
 
    finishUpload(res){
       console.log(res.url);
-      this.$set(this.model,'icon',res.url);
-      this.model.icon = res.url;
+      this.$set(this.model,'icon',res.url);//如果data()中model没有定义的话就用这种方式<显式复制>
+      // this.model.icon = res.url;//如果data()中model定义的话就用这种方式建议每次现在model中将需要的数行都先定义好之后直接使用这中方法
     },
 
     async save() {

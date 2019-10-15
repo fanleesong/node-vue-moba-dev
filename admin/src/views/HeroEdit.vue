@@ -11,7 +11,7 @@
           :action="$http.defaults.baseURL + '/upload'"
           :show-file-list="false"
           :on-success="finishUpload">
-          <img v-if="model.avatar" :src="model.icon" class="avatar">
+          <img v-if="model.avatar" :src="model.avatar" class="avatar">
           <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
       </el-form-item>
@@ -40,7 +40,7 @@ export default {
 
    finishUpload(res){
       console.log(res.url);
-      // this.$set(this.model,'avatar',res.url);//如果data()中model没有定义的话就用这种方式
+      // this.$set(this.model,'avatar',res.url);//如果data()中model没有定义的话就用这种方式<显式复制>
       this.model.avatar = res.url;//如果data()中model定义的话就用这种方式建议每次现在model中将需要的数行都先定义好之后直接使用这中方法
     },
 

@@ -42,7 +42,7 @@ export default {
     },
 
     async remove(row){
-       this.$confirm(`确定删除"${row.name}"分类？`, '提示', {
+       this.$confirm(`确定删除"${row.name}"物品？`, '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
